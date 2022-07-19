@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/drawable/ic_cloud_foggy_weather_cloudy_forecast_icon.xml" value="0.1" />
         <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/activity_main.xml" value="0.27181467181467184" />
-        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_home.xml" value="0.27421875" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_home.xml" value="0.1" />
       </map>
     </option>
   </component>
