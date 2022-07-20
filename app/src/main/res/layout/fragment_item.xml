@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/homeCurrentCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tehran"
+        />
+
+    <ImageView
+        android:id="@+id/homeCurrentWeatherIcon"
+        android:layout_width="160dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentCity"
+        tools:srcCompat="@drawable/ic_cloud_foggy_weather_cloudy_forecast_icon"
+        />
+
+    <TextView
+        android:id="@+id/homeCurrentTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/homeCurrentWeatherIcon"
+        app:layout_constraintStart_toStartOf="@+id/homeCurrentWeatherIcon"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentWeatherIcon"
+        tools:text="32.0 F"
+        />
+
+    <TextView
+        android:id="@+id/homeCurrentTempMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/homeCurrentTempMax"
+        app:layout_constraintStart_toStartOf="@+id/homeCurrentTempText"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentTempText"
+        tools:text="20.0 F"
+        />
+
+    <TextView
+        android:id="@+id/homeCurrentTempMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/homeCurrentTempText"
+        app:layout_constraintStart_toEndOf="@id/homeCurrentTempMin"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentTempText"
+        tools:text="46.0 F"
+        />
+
+    <TextView
+        android:id="@+id/homeCurrentSituation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentTempMin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Very warm from Wednesday to Thursday"
+        />
+
+    <View
+        android:id="@+id/homeBelowCurrentDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.5"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeCurrentSituation"
+        />
+
+    <LinearLayout
+        android:id="@+id/homeSecondDayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/homeThirdDayLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeBelowCurrentDivider"
+        >
+
+        <TextView
+            android:id="@+id/homeSecondDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="Mon"
+            />
+
+        <ImageView
+            android:id="@+id/homeSecondDayIcon"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            tools:srcCompat="@drawable/ic_cloud_raining_weather_forecast_rain_icon"
+            />
+
+        <TextView
+            android:id="@+id/homeSecondDayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            tools:text="07/20"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeThirdDayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/homeFourthDayLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeSecondDayLayout"
+        app:layout_constraintTop_toBottomOf="@id/homeBelowCurrentDivider"
+        >
+
+        <TextView
+            android:id="@+id/homeThirdDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="Tue"
+            />
+
+        <ImageView
+            android:id="@+id/homeThirdDayIcon"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            tools:srcCompat="@drawable/ic_fog_foggy_forecast_weather_icon"
+            />
+
+        <TextView
+            android:id="@+id/homeThirdDayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="07/21"
+            tools:textColor="@android:color/black"
+            tools:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeFourthDayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/homeFifthDayLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeThirdDayLayout"
+        app:layout_constraintTop_toBottomOf="@id/homeBelowCurrentDivider"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Wed"
+            tools:textColor="@android:color/black"
+            tools:textSize="14sp"
+            />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            tools:srcCompat="@drawable/ic_cloudy_sunny_weather_cloud_forecast_icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="07/22"
+            tools:textColor="@android:color/black"
+            tools:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeFifthDayLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeFourthDayLayout"
+        app:layout_constraintTop_toBottomOf="@id/homeBelowCurrentDivider"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Thu"
+            tools:textColor="@android:color/black"
+            tools:textSize="14sp"
+            />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            tools:srcCompat="@drawable/ic_cloudy_moon_night_cloud_weather_icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="07/23"
+            tools:textColor="@android:color/black"
+            tools:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
