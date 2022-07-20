@@ -1,6 +1,7 @@
 package com.example.accuweather
 
 import android.app.Application
+import com.example.accuweather.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -11,7 +12,7 @@ class ApplicationClass: Application() {
         startKoin {
             androidLogger()
             androidContext(this@ApplicationClass)
-            modules()
+            modules(appModule)
         }
     }
 }
