@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.2105" />
         <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/drawable/ic_cloud_foggy_weather_cloudy_forecast_icon.xml" value="0.1" />
-        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/activity_main.xml" value="0.27181467181467184" />
-        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/drawable/ring_shape.xml" value="0.1565" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_home.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_item.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/fragment_search.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/item_recycler_view.xml" value="0.2" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/item_recycler_view_home.xml" value="0.23055555555555557" />
+        <entry key="..\:/Users/MoeinLatifi/AndroidStudioProjects/AccuWeather/app/src/main/res/layout/item_recycler_view_search.xml" value="0.2212962962962963" />
       </map>
     </option>
   </component>

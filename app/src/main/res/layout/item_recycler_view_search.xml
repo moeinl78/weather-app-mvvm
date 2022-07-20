@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:layout_marginTop="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@android:color/darker_gray"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="4dp"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/searchCurrentCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="center_vertical|start"
+            tools:text="Tehran"
+            />
+
+        <ImageView
+            android:id="@+id/searchAddButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_baseline_add_circle_outline_24"
+            app:tint="@android:color/black"
+            />
+
+        <ImageView
+            android:id="@+id/searchRemoveButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24"
+            app:tint="@android:color/black"
+            />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>
