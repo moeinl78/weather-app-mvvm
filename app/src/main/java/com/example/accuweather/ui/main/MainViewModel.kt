@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.accuweather.data.model.FiveDayModel
+import com.example.accuweather.data.model.LocationDB
 import com.example.accuweather.data.model.LocationModel
 import com.example.accuweather.repository.MainRepository
 import com.example.accuweather.utils.Resources
@@ -17,6 +18,7 @@ class MainViewModel(private val mainRepository: MainRepository): ViewModel() {
 
     private val _locationKey = MutableLiveData<Resources<LocationModel>>()
     private val _fiveDayForecast = MutableLiveData<Resources<FiveDayModel>>()
+    private val _locations = MutableLiveData<List<LocationDB>>()
 
     val locationKey: LiveData<Resources<LocationModel>>
         get() = _locationKey
@@ -24,12 +26,33 @@ class MainViewModel(private val mainRepository: MainRepository): ViewModel() {
     val fiveDayModel: LiveData<Resources<FiveDayModel>>
         get() = _fiveDayForecast
 
+    val locations: LiveData<List<LocationDB>>
+        get() = _locations
+
     fun requestLocationKey(cityName: String) {
         getLocationKey(cityName)
     }
 
     fun requestFiveDayModel(key: String) {
         getFiveDayForecast(key)
+    }
+
+    fun insertLocation(locationDB: LocationDB) {
+        viewModelScope.launch(Dispatchers.IO) {
+            mainRepository.insertLocation(locationDB)
+        }
+    }
+
+    fun removeLocation(locationDB: LocationDB) {
+        viewModelScope.launch(Dispatchers.IO) {
+            mainRepository.removeLocation(locationDB)
+        }
+    }
+
+    fun getLocations() {
+        viewModelScope.launch(Dispatchers.IO) {
+            _locations.postValue(mainRepository.getLocations().value)
+        }
     }
 
     private fun getLocationKey(cityName: String) {
