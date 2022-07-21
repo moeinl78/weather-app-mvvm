@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.accuweather.data.model.FiveDayModel
 import com.example.accuweather.data.model.LocationDB
-import com.example.accuweather.data.model.LocationModel
+import com.example.accuweather.data.model.LocationModelItem
 import com.example.accuweather.repository.MainRepository
 import com.example.accuweather.utils.Resources
 import kotlinx.coroutines.Dispatchers
@@ -16,11 +16,11 @@ import kotlinx.coroutines.withContext
 
 class MainViewModel(private val mainRepository: MainRepository): ViewModel() {
 
-    private val _locationKey = MutableLiveData<Resources<LocationModel>>()
+    private val _locationKey = MutableLiveData<Resources<List<LocationModelItem>>>()
     private val _fiveDayForecast = MutableLiveData<Resources<FiveDayModel>>()
     private val _locations = MutableLiveData<List<LocationDB>>()
 
-    val locationKey: LiveData<Resources<LocationModel>>
+    val locationKey: LiveData<Resources<List<LocationModelItem>>>
         get() = _locationKey
 
     val fiveDayModel: LiveData<Resources<FiveDayModel>>

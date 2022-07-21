@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.accuweather.data.model.LocationModel
+import com.example.accuweather.data.model.LocationModelItem
 import com.example.accuweather.databinding.ItemRecyclerViewBinding
 import com.example.accuweather.utils.LocationModelDiffCallback
 
-class HomeAdapter: ListAdapter<LocationModel, HomeAdapter.ViewHolder>(LocationModelDiffCallback()) {
+class HomeAdapter: ListAdapter<LocationModelItem, HomeAdapter.ViewHolder>(LocationModelDiffCallback()) {
 
     class ViewHolder private constructor(private val binding: ItemRecyclerViewBinding): RecyclerView.ViewHolder(binding.root) {
         companion object {
@@ -19,8 +19,8 @@ class HomeAdapter: ListAdapter<LocationModel, HomeAdapter.ViewHolder>(LocationMo
             }
         }
 
-        fun bind(location: LocationModel) {
-            binding.homeCurrentCity.text = location[adapterPosition].englishName
+        fun bind(location: LocationModelItem) {
+            binding.homeCurrentCity.text = location.englishName
         }
     }
 

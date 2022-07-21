@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.accuweather.data.model.LocationDB
-import com.example.accuweather.data.model.LocationModel
+import com.example.accuweather.data.model.LocationModelItem
 import com.example.accuweather.databinding.ItemRecyclerViewSearchBinding
 import com.example.accuweather.utils.LocationModelDiffCallback
 
-class SearchAdapter(private val searchEvents: SearchEvents): ListAdapter<LocationModel, SearchAdapter.ViewHolder>(LocationModelDiffCallback()) {
+class SearchAdapter(private val searchEvents: SearchEvents): ListAdapter<LocationModelItem, SearchAdapter.ViewHolder>(LocationModelDiffCallback()) {
 
     class ViewHolder private constructor(private val binding: ItemRecyclerViewSearchBinding) :RecyclerView.ViewHolder(binding.root) {
 
@@ -21,14 +21,14 @@ class SearchAdapter(private val searchEvents: SearchEvents): ListAdapter<Locatio
             }
         }
 
-        fun bind(item: LocationModel, searchEvents: SearchEvents) {
-            binding.searchCurrentCity.text = item[adapterPosition].englishName
+        fun bind(item: LocationModelItem, searchEvents: SearchEvents) {
+            binding.searchCurrentCity.text = item.englishName
             binding.searchAddButton.setOnClickListener {
                 searchEvents.onClickListener(
                     LocationDB(
-                        key = item[adapterPosition].key,
-                        localizedName = item[adapterPosition].localizedName,
-                        englishName = item[adapterPosition].englishName
+                        key = item.key,
+                        localizedName = item.localizedName,
+                        englishName = item.englishName
                     )
                 )
             }

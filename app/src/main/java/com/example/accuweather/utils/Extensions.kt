@@ -1,14 +1,14 @@
 package com.example.accuweather.utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.accuweather.data.model.LocationModel
+import com.example.accuweather.data.model.LocationModelItem
 
-class LocationModelDiffCallback: DiffUtil.ItemCallback<LocationModel>() {
-    override fun areItemsTheSame(oldItem: LocationModel, newItem: LocationModel): Boolean {
-        return oldItem[0].key == newItem[0].key
+class LocationModelDiffCallback: DiffUtil.ItemCallback<LocationModelItem>() {
+    override fun areItemsTheSame(oldItem: LocationModelItem, newItem: LocationModelItem): Boolean {
+        return oldItem.key == newItem.key
     }
 
-    override fun areContentsTheSame(oldItem: LocationModel, newItem: LocationModel): Boolean {
+    override fun areContentsTheSame(oldItem: LocationModelItem, newItem: LocationModelItem): Boolean {
         return oldItem == newItem
     }
 }
