@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.accuweather.data.model.LocationDB
 import com.example.accuweather.databinding.FragmentSearchBinding
 import com.example.accuweather.ui.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class SearchFragment: Fragment() {
+class SearchFragment: Fragment(), SearchAdapter.SearchEvents {
 
     private lateinit var binding: FragmentSearchBinding
+    private lateinit var adapter: SearchAdapter
     private val mainViewModel by sharedViewModel<MainViewModel>()
 
     override fun onCreateView(
@@ -25,5 +27,10 @@ class SearchFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter = SearchAdapter(this)
+    }
+
+    override fun onClickListener(locationDB: LocationDB) {
+        mainViewModel.insertLocation(locationDB)
     }
 }
