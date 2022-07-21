@@ -20,7 +20,7 @@ val appModule = module {
     }
 
     factory {
-        MainRepository(get())
+        MainRepository(get(), get())
     }
 
     viewModel {
