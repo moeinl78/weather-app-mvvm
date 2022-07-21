@@ -10,10 +10,10 @@ import com.example.accuweather.data.model.LocationDB
 @Dao
 interface LocationDAO {
     @Insert
-    suspend fun insertLocation(locationDB: LocationDB)
+    fun insertLocation(locationDB: LocationDB)
 
     @Delete
-    suspend fun removeLocation(locationDB: LocationDB)
+    fun removeLocation(locationDB: LocationDB)
 
     @Query("SELECT * FROM location_table")
     fun getLocations(): LiveData<List<LocationDB>>
